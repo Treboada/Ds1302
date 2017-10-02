@@ -95,6 +95,7 @@ class Ds1302
 
         uint8_t _readByte();
         void _writeByte(uint8_t value);
+        void _nextBit();
 
         uint8_t _dec2bcd(uint8_t dec);
         uint8_t _bcd2dec(uint8_t bcd);
