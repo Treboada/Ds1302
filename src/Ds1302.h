@@ -44,7 +44,7 @@ class Ds1302
             DOW_MON = 1,
             DOW_TUE = 2,
             DOW_WED = 3,
-            DOW_THR = 4,
+            DOW_THU = 4,
             DOW_FRI = 5,
             DOW_SAT = 6,
             DOW_SUN = 7
