@@ -1,5 +1,13 @@
-
-// Main.cpp
+/** GetDateTime.cpp
+ *
+ * Example of getting the date and time from the RTC.
+ *
+ * @version 1.0.1
+ * @author Rafa Couto <caligari@treboada.net>
+ * @license GNU Affero General Public License v3.0
+ * @see https://github.com/Treboada/Ds1302
+ *
+ */
 #include <Arduino.h>
 #include <Ds1302.h>
 

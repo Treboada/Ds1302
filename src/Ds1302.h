@@ -1,4 +1,13 @@
-// Ds1302.h
+/** Ds1302.h
+ *
+ * Ds1302 class.
+ *
+ * @version 1.0.1
+ * @author Rafa Couto <caligari@treboada.net>
+ * @license GNU Affero General Public License v3.0
+ * @see https://github.com/Treboada/Ds1302
+ *
+ */
 
 #ifndef _DS_1302_H
 #define _DS_1302_H
