@@ -2,10 +2,25 @@
 
 [![Travis status](https://travis-ci.org/Treboada/Ds1302.svg?branch=master)](https://travis-ci.org/Treboada/Ds1302)
 
-A C/C++ library to use DS1302 RTC chip.
+A C/C++ library to use DS1302 RTC chip. 
+
+Tested with Arduino, ESP32 and ESP8266, but easy to port to your favourite MCU.
 
 ## Examples
 
 - [GetDateTime](https://github.com/Treboada/Ds1302/tree/master/examples/01)
+- [SetDateTime](https://github.com/Treboada/Ds1302/tree/master/examples/02)
 
+## License
+
+This library is AGPL-3.0 licensed. See the [LICENSE][LIC01] file.
+
+
+## Support
+
+Bugs, feature requests, contributions are welcome: [Ds1302 issue tracker][ISU01].
+
+
+[ISU01]: https://github.com/Treboada/Ds1302/issues
+[LIC01]: LICENSE
 
