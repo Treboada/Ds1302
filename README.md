@@ -24,3 +24,14 @@ Bugs, feature requests, contributions are welcome: [Ds1302 issue tracker][ISU01]
 [ISU01]: https://github.com/Treboada/Ds1302/issues
 [LIC01]: LICENSE
 
+## Changelog
+
+### 1.0.2
+
+- Bugfix: unable to set date 31, dow 7 and month 12.
+- Platformio environment for ESP8266.
+
+### 1.0.1
+
+- First version.
+

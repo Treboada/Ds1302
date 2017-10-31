@@ -1,6 +1,6 @@
 {
 	"name": "Ds1302",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"keywords": "library, C, C++, RTC, DS1302, clock, date, time, datetime",
 	"description": "A C/C++ library to use DS1302 RTC chip.",
 	"license": "AGPL-3.0",
