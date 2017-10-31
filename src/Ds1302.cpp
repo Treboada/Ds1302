@@ -77,9 +77,9 @@ void Ds1302::setDateTime(DateTime* dt)
     _writeByte(_dec2bcd(dt->second % 60 ));
     _writeByte(_dec2bcd(dt->minute % 60 ));
     _writeByte(_dec2bcd(dt->hour   % 24 ));
-    _writeByte(_dec2bcd(dt->day    % 31 ));
-    _writeByte(_dec2bcd(dt->month  % 12 ));
-    _writeByte(_dec2bcd(dt->dow    % 7  ));
+    _writeByte(_dec2bcd(dt->day    % 32 ));
+    _writeByte(_dec2bcd(dt->month  % 13 ));
+    _writeByte(_dec2bcd(dt->dow    % 8  ));
     _writeByte(_dec2bcd(dt->year   % 100));
     _writeByte(0b10000000);
     _end();
