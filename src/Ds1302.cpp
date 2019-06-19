@@ -2,7 +2,7 @@
  *
  * Ds1302 class.
  *
- * @version 1.0.1
+ * @version 1.0.3
  * @author Rafa Couto <caligari@treboada.net>
  * @license GNU Affero General Public License v3.0
  * @see https://github.com/Treboada/Ds1302
@@ -96,10 +96,11 @@ void Ds1302::halt()
 
 void Ds1302::_prepareRead(uint8_t address)
 {
-    _setDirection(INPUT);
+    _setDirection(OUTPUT);
     digitalWrite(_pin_ena, HIGH);
     uint8_t command = 0b10000001 | address;
     _writeByte(command);
+    _setDirection(INPUT);
 }
 
 

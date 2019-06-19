@@ -26,6 +26,10 @@ Bugs, feature requests, contributions are welcome: [Ds1302 issue tracker][ISU01]
 
 ## Changelog
 
+### 1.0.3
+
+- Bugfix: error on consecutive reads (thanks Reinhard Kopka).
+
 ### 1.0.2
 
 - Bugfix: unable to set date 31, dow 7 and month 12.
