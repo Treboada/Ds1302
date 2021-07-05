@@ -26,6 +26,11 @@ Bugs, feature requests, contributions are welcome: [Ds1302 issue tracker][ISU01]
 
 ## Changelog
 
+### 1.0.4
+
+- Library added to the Arduino Library Manager (thanks
+  [@jackjansen](https://github.com/Treboada/Ds1302/issues/2))
+
 ### 1.0.3
 
 - Bugfix: error on consecutive reads (thanks Reinhard Kopka).
