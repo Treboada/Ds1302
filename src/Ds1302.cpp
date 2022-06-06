@@ -88,8 +88,24 @@ void Ds1302::setDateTime(DateTime* dt)
 
 void Ds1302::halt()
 {
+    _prepareRead(REG_SECONDS);
+    uint8_t seconds = _readByte();
+    _end();
+
     _prepareWrite(REG_SECONDS);
-    _writeByte(0b10000000);
+    _writeByte(seconds | 0b10000000);
+    _end();
+}
+
+
+void Ds1302::start()
+{
+    _prepareRead(REG_SECONDS);
+    uint8_t seconds = _readByte();
+    _end();
+
+    _prepareWrite(REG_SECONDS);
+    _writeByte(seconds & ~0b10000000);
     _end();
 }
 

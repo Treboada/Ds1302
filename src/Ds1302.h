@@ -80,6 +80,11 @@ class Ds1302
         void halt();
 
         /**
+         * Starts the oscillator.
+         */
+        void start();
+
+        /**
          * Returns the current date and time.
          */
         void getDateTime(DateTime* dt);;
