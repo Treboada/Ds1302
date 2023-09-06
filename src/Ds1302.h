@@ -40,7 +40,7 @@ class Ds1302
             MONTH_JUN = 6,
             MONTH_JUL = 7,
             MONTH_AUG = 8,
-            MONTH_SET = 9,
+            MONTH_SEP = 9,
             MONTH_OCT = 10,
             MONTH_NOV = 11,
             MONTH_DEC = 12
