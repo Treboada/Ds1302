@@ -26,6 +26,11 @@ Bugs, feature requests, contributions are welcome: [Ds1302 issue tracker][ISU01]
 
 ## Changelog
 
+### 1.0.5
+
+- Bugfix: wrong mask when reading the year register (thanks
+  [@photomultiplier](https://github.com/Treboada/Ds1302/pull/8)
+
 ### 1.0.4
 
 - Library added to the Arduino Library Manager (thanks
