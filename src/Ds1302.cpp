@@ -62,7 +62,7 @@ void Ds1302::getDateTime(DateTime* dt)
     dt->day    = _bcd2dec(_readByte() & 0b00111111);
     dt->month  = _bcd2dec(_readByte() & 0b00011111);
     dt->dow    = _bcd2dec(_readByte() & 0b00000111);
-    dt->year   = _bcd2dec(_readByte() & 0b01111111);
+    dt->year   = _bcd2dec(_readByte() & 0b11111111);
     _end();
 }
 
