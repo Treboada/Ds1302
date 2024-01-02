@@ -88,24 +88,28 @@ void Ds1302::setDateTime(DateTime* dt)
 
 void Ds1302::halt()
 {
-    _prepareRead(REG_SECONDS);
-    uint8_t seconds = _readByte();
-    _end();
-
-    _prepareWrite(REG_SECONDS);
-    _writeByte(seconds | 0b10000000);
-    _end();
+    _setHaltFlag(true);
 }
 
 
 void Ds1302::start()
 {
-    _prepareRead(REG_SECONDS);
+    _setHaltFlag(false);
+}
+
+
+void Ds1302::_setHaltFlag(bool stopped)
+{
+    _prepareRead(REG_BURST);
     uint8_t seconds = _readByte();
+    uint8_t minutes = _readByte(); /* avoid race conditions at :59 */
     _end();
 
-    _prepareWrite(REG_SECONDS);
-    _writeByte(seconds & ~0b10000000);
+    if (stopped) seconds |= 0b10000000; else seconds &= ~0b10000000;
+
+    _prepareWrite(REG_BURST);
+    _writeByte(seconds);
+    _writeByte(minutes);
     _end();
 }
 
