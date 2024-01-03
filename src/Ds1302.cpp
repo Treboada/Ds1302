@@ -100,27 +100,21 @@ void Ds1302::start()
 
 void Ds1302::_setHaltFlag(bool stopped)
 {
+    uint8_t regs[8];
     _prepareRead(REG_BURST);
-    uint8_t seconds = _readByte();
-    uint8_t minutes = _readByte();
+    for (int b = 0; b < 8; b++) regs[b] = _readByte();
     _end();
 
-    if (stopped) seconds |= 0b10000000; else seconds &= ~0b10000000;
+    if (stopped) regs[0] |= 0b10000000; else regs[0] &= ~0b10000000;
+    regs[7] = 0b10000000;
 
-    _prepareWrite(REG_SECONDS);
-    _writeByte(seconds);
+    _prepareWrite(REG_WP);
+    _writeByte(0b00000000);
     _end();
 
-    _prepareRead(REG_MINUTES);
-    uint8_t new_minutes = _readByte();
+    _prepareWrite(REG_BURST);
+    for (int b = 0; b < 8; b++) _writeByte(regs[b]);
     _end();
-
-    /* avoid race conditions at :59 */
-    if (minutes != new_minutes) {
-        _prepareWrite(REG_SECONDS);
-        _writeByte(seconds & 0b10000000);
-        _end();
-    }
 }
 
 
