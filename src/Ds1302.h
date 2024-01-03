@@ -113,6 +113,8 @@ class Ds1302
 
         uint8_t _dec2bcd(uint8_t dec);
         uint8_t _bcd2dec(uint8_t bcd);
+
+        void _setHaltFlag(bool stopped);
 };
 
 #endif // _DS_1302_H
