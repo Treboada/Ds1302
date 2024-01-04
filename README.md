@@ -1,35 +1,50 @@
 # Ds1302
 
-[![Travis status](https://travis-ci.org/Treboada/Ds1302.svg?branch=master)](https://travis-ci.org/Treboada/Ds1302)
-
 A C/C++ library to use DS1302 RTC chip. 
 
-Tested with Arduino, ESP32 and ESP8266, but easy to port to your favourite MCU.
+Tested with (but easily portable to your favourite MCU):
+
+- [X] Arduino
+- [X] ESP32 
+- [X] ESP8266 
+
+Features:
+
+- Simple to use and manage.
+- Platformio compatible.
+- Control of start/stop of the oscillator.
+- Secure against edge time race conditions (see [#4][ISU02]).
 
 ## Examples
 
-- [GetDateTime](https://github.com/Treboada/Ds1302/tree/master/examples/01)
-- [SetDateTime](https://github.com/Treboada/Ds1302/tree/master/examples/02)
+- [GetDateTime][EXA01]
+- [SetDateTime][EXA02]
 
 ## License
 
 This library is AGPL-3.0 licensed. See the [LICENSE][LIC01] file.
 
-
 ## Support
 
 Bugs, feature requests, contributions are welcome: [Ds1302 issue tracker][ISU01].
 
-
+[EXA01]: https://github.com/Treboada/Ds1302/tree/master/examples/01
+[EXA02]: https://github.com/Treboada/Ds1302/tree/master/examples/02
 [ISU01]: https://github.com/Treboada/Ds1302/issues
+[ISU02]: https://github.com/Treboada/Ds1302/issues/4
 [LIC01]: LICENSE
 
 ## Changelog
 
+### 1.1.0
+
+- Start and halt oscillator without setting current timestamp (thanks
+  [@photomultiplier](https://github.com/Treboada/Ds1302/pull/9))
+
 ### 1.0.5
 
 - Bugfix: wrong mask when reading the year register (thanks
-  [@photomultiplier](https://github.com/Treboada/Ds1302/pull/8)
+  [@photomultiplier](https://github.com/Treboada/Ds1302/pull/8))
 
 ### 1.0.4
 
