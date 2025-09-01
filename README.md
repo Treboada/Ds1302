@@ -8,6 +8,8 @@ Tested with (but easily portable to your favourite MCU):
 - [X] ESP32 
 - [X] ESP8266 
 
+[![PlatformIO CI - main](https://github.com/Treboada/Ds1302/actions/workflows/platformio.yml/badge.svg?branch=main)](https://github.com/Treboada/Ds1302/actions/workflows/platformio.yml?query=branch%3Amain)
+
 Features:
 
 - Simple to use and manage.
@@ -28,13 +30,17 @@ This library is AGPL-3.0 licensed. See the [LICENSE][LIC01] file.
 
 Bugs, feature requests, contributions are welcome: [Ds1302 issue tracker][ISU01].
 
-[EXA01]: https://github.com/Treboada/Ds1302/tree/master/examples/01
-[EXA02]: https://github.com/Treboada/Ds1302/tree/master/examples/02
+[EXA01]: https://github.com/Treboada/Ds1302/tree/master/examples/get-date-time
+[EXA02]: https://github.com/Treboada/Ds1302/tree/master/examples/set-date-time
 [ISU01]: https://github.com/Treboada/Ds1302/issues
 [ISU02]: https://github.com/Treboada/Ds1302/issues/4
 [LIC01]: LICENSE
 
 ## Changelog
+
+### 1.1.1
+
+- Pipeline to compile and test the examples with Github actions
 
 ### 1.1.0
 
