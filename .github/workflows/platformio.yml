@@ -1,0 +1,44 @@
+name: PlatformIO CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: infinitecoding/platformio-for-ci:6.1
+
+    strategy:
+      matrix:
+        env: [arduino, esp8266, esp32]
+        example: [examples/get-date-time, examples/set-date-time]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Cache PlatformIO
+        uses: actions/cache@v4
+        with:
+          path: ~/.platformio
+          key: ${{ runner.os }}-platformio-${{ matrix.env }}-${{ hashFiles('platformio.ini') }}
+          restore-keys: |
+            ${{ runner.os }}-platformio-${{ matrix.env }}-
+            ${{ runner.os }}-platformio-
+
+      - name: Build ${{ matrix.example }} for ${{ matrix.env }}
+        run: |
+          platformio --no-ansi run -c ./platformio.ini -d ${{ matrix.example }} -e ${{ matrix.env }}
+
+      - name: Upload artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs-${{ matrix.env }}-${{ matrix.example }}
+          path: examples/${{ matrix.example }}/.pio/build/**/*
+

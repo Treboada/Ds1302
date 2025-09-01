@@ -2,7 +2,7 @@
  *
  * Ds1302 class.
  *
- * @version 1.0.3
+ * @version 1.1.1
  * @author Rafa Couto <caligari@treboada.net>
  * @license GNU Affero General Public License v3.0
  * @see https://github.com/Treboada/Ds1302

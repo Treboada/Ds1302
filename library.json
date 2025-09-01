@@ -1,6 +1,6 @@
 {
   "name": "Ds1302",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "keywords": "library, C, C++, RTC, DS1302, clock, date, time, datetime",
   "description": "A C/C++ library to use DS1302 RTC chip.",
   "license": "AGPL-3.0",
@@ -11,19 +11,25 @@
     "espressif8266",
     "espressif32"
   ],
+  "headers": [
+    "Ds1302.h"
+  ],
+  "build": {
+    "srcDir": "lib/Ds1302"
+  },
   "examples": [
     {
       "name": "GetDateTime",
-      "base": "examples/01",
+      "base": "examples/get-date-time/src",
       "files": [
-        "GetDateTime.cpp"
+        "main.cpp"
       ]
     },
     {
       "name": "SetDateTime",
-      "base": "examples/02",
+      "base": "examples/set-date-time/src",
       "files": [
-        "SetDateTime.cpp"
+        "main.cpp"
       ]
     }
   ],

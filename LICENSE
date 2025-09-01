@@ -630,7 +630,7 @@ state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
     Ds1302 is a C/C++ library to use DS1302 RTC chip. 
-    Copyright (C) 2017  Rafa Couto <caligari@treboda.net>
+    Copyright (C) 2017-2025  Rafa Couto <caligari@treboda.net>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published
